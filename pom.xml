@@ -16,6 +16,7 @@
 	<modules>
 		<module>core-service</module>
 		<module>mqtt-to-kafka-service</module>
+		<module>rule-engine</module>
 	</modules>
 	<packaging>pom</packaging>
 	<url/>
