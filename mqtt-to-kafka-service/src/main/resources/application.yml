@@ -1,9 +1,8 @@
 spring:
   application:
-    name: core-service
+    name: mqtt-to-kafka-service
 
 logging:
   level:
     ROOT: DEBUG
     com.iot: DEBUG
-
