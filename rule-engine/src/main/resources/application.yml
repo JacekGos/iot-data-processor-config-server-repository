@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: rule-engine-service
+
+logging:
+  level:
+    ROOT: DEBUG
+    com.iot: DEBUG
