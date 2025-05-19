@@ -17,6 +17,7 @@
 		<module>core-service</module>
 		<module>mqtt-to-kafka-service</module>
 		<module>rule-engine</module>
+		<module>websocket-gateway</module>
 	</modules>
 	<packaging>pom</packaging>
 	<url/>
