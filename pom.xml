@@ -15,6 +15,7 @@
 	<description>Spring boot microservices application</description>
 	<modules>
 		<module>core-service</module>
+		<module>mqtt-to-kafka-service</module>
 	</modules>
 	<packaging>pom</packaging>
 	<url/>
