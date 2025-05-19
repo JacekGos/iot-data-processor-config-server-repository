@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: websocket-gateway
+
+logging:
+  level:
+    ROOT: DEBUG
+    com.iot: DEBUG
