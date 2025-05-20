@@ -21,6 +21,7 @@
 		<module>api-gateway</module>
 		<module>discovery-service</module>
 		<module>config-service</module>
+		<module>app-config-data</module>
 	</modules>
 	<packaging>pom</packaging>
 	<url/>
@@ -37,6 +38,12 @@
 
 	<dependencyManagement>
 		<dependencies>
+
+			<dependency>
+				<groupId>com.microservices.demo</groupId>
+				<artifactId>app-config-data</artifactId>
+				<version>${project.version}</version>
+			</dependency>
 
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
