@@ -8,7 +8,7 @@ logging:
 
 spring:
   application:
-    name: configserver
+    name: configservice
   cloud:
     config:
       server:
@@ -18,7 +18,8 @@ spring:
           username: JacekGos
           password: ${GITHUB_TOKEN}
           clone-on-start: true
+#        bootstrap: false
     fail-fast: true
 
 log:
-  app-name: config-server
+  app-name: config-service
