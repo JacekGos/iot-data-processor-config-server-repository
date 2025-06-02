@@ -16,3 +16,22 @@ services:
 #      - "MANAGEMENT_ZIPKIN_TRACING_ENDPOINT=http://zipkin:9411"
     networks:
       - ${GLOBAL_NETWORK:-services}
+
+  core-service:
+    image: ${GROUP_ID}/core.service:${SERVICE_VERSION:-latest}
+    ports:
+      - "8100:8100"
+    depends_on:
+      - config-service
+    volumes:
+      - "./docker-logs:/workspace/core-service/logs"
+      - "./check-config-server-started.sh:/usr/local/bin/check-config-server-started.sh"
+    user: root
+    entrypoint: [ "check-config-server-started.sh" ]
+    environment:
+      - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xms128m -Xmx256m"
+      - "LOGGING_LEVEL_COM_MICROSERVICES_DEMO=info"
+      - "LOGGING_LEVEL_ROOT=info"
+      - "LOG_APP-NAME=core-service"
+    networks:
+      - ${GLOBAL_NETWORK:-services}

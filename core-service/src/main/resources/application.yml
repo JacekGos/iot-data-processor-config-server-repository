@@ -2,8 +2,11 @@ spring:
   application:
     name: core-service
 
+server:
+  port: 8100
+
 logging:
   level:
-    ROOT: DEBUG
-    com.iot: DEBUG
+    ROOT: INFO
+    com.iot: INFO
 
