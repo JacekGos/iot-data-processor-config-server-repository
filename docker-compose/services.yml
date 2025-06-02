@@ -12,8 +12,6 @@ services:
       - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5007 -Xms128m -Xmx256m"
       - "LOG_APP-NAME=config-service"
       - "SERVER_PORT=8888"
-#      - "ENCRYPT_KEY=${ENCRYPT_KEY}"
-#      - "MANAGEMENT_ZIPKIN_TRACING_ENDPOINT=http://zipkin:9411"
     networks:
       - ${GLOBAL_NETWORK:-services}
 
@@ -30,7 +28,7 @@ services:
     entrypoint: [ "check-config-server-started.sh" ]
     environment:
       - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xms128m -Xmx256m"
-      - "LOGGING_LEVEL_COM_MICROSERVICES_DEMO=info"
+      - "LOGGING_LEVEL_COM_IOT=info"
       - "LOGGING_LEVEL_ROOT=info"
       - "LOG_APP-NAME=core-service"
     networks:
