@@ -25,7 +25,8 @@ services:
       - "./docker-logs:/workspace/core-service/logs"
       - "./check-config-server-started.sh:/usr/local/bin/check-config-server-started.sh"
     user: root
-    entrypoint: [ "check-config-server-started.sh" ]
+    entrypoint: ["check-config-server-started.sh"]
+#    entrypoint: [ "/usr/local/bin/check-config-server-started.sh" ]
     environment:
       - "JAVA_OPTS=-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005 -Xms128m -Xmx256m"
       - "LOGGING_LEVEL_COM_IOT=info"
